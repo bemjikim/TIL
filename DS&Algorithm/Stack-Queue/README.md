@@ -38,9 +38,9 @@
         else: break
 ---
 ### 3. Circular Queue
-    #이때, cirqueue의 배열의 크기는 6으로 고정하고 빈 배열을 None으로로 가정하자.
+    # 이때, cirqueue의 배열의 크기는 6으로 고정하고 빈 배열을 None으로로 가정하자.
     def f_cirqueue():
-        # 변수 초기화화
+        # 변수 초기화
         cirqueue = [None, None, None, None, None, None]
         rear = 0
         front = 0
@@ -82,9 +82,3 @@
             print(f"Circular queue array is {cirqueue}")
         
         else: break
----
-### main function
-    if __name__ == '__main__':
-        f_stack()
-        f_queue()
-        f_cirqueue()
