@@ -22,7 +22,7 @@
             # print(arr)
         print(f'Selection sort result: {arr}')
 ---
-# 2. Insertion Sort
+### 2. Insertion Sort
     def insertion_sort(arr):
         # 첫 번째 for문은 기준값을 선정하는 것으로! (맨 왼쪽 부터 오른쪽으로 갈 수 있게!)
         # 근데 맨 왼쪽은 어차피 비교가 안되니까 1 ~ len(arr)로 하자
@@ -42,7 +42,7 @@
             # print(arr)
         print(f'Insertion sort result: {arr}')
 ---
-# 3. Bubble Sort
+### 3. Bubble Sort
     def bubble_sort(arr):
         # 첫번째 for문은 0 ~ len(arr)까지 돌게한다
         for i in range(len(arr)):
@@ -57,7 +57,7 @@
             # print(arr)
         print(f'Bubble sort result: {arr}')
 ---
-# 4. Merge Sort (재귀함수)
+### 4. Merge Sort (재귀함수)
     def merge_sort(arr):
         # 먼저, 각 배열들을 sementation을 하자
         if len(arr) < 2:
@@ -90,7 +90,7 @@
     # 각 쪼개져서 한 정렬 값들을 이전에 함수를 부른 친구에게 넘겨준다
     return merged_arr
 ---
-# 5-1. Quick Sort (이 때, pivot의 값은 항상 입력받은 배열의 left값에 의거해 정해진다.)
+### 5-1. Quick Sort (이 때, pivot의 값은 항상 입력받은 배열의 left값에 의거해 정해진다.)
     def partition(arr, p, r):
         pivot = arr[p]
         # low는 항상 pivot보다 +1의 위치에 and low는 r값 (right)의 위치에에
@@ -123,7 +123,7 @@
 
     print(f'Quick sort result: {arr}')
 ---
-# 5-2. Try another version!! Quick Sort -> 한개의 함수로 합친 것 (순수 재귀함수)
+### 5-2. Try another version!! Quick Sort -> 한개의 함수로 합친 것 (순수 재귀함수)
     def quick_sort2(arr, left, right):
         # quick sort 재귀 함수를 부를 때, left가 right보다 크면 안되므로 if문 선언언
         if left >= right:
@@ -154,7 +154,7 @@
     quick_sort2(arr, left, high - 1)
     quick_sort2(arr, high + 1, right)
 ---
-# 6. Heap Sort
+### 6. Heap Sort
     def heapify(arr, arr_len):
         # 처음 arr가 들어오면 맨 밑에서 부터 큰 값이 있으면 끌어올려야 한다
         last_parent = arr_len // 2 - 1
