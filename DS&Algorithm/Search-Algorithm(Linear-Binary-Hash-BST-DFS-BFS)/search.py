@@ -12,13 +12,18 @@ def linear_search(arr, key):
 def binary_search(arr, key):
     while(1):
         i = int(len(arr)/2)
-        if (arr[i] > key): arr = arr[i+1:]
-        elif (arr[i] < key): arr = arr[:i-1]
-        elif (arr[i] == key): 
-            print(f'{key} is here!')
-            break
-        else: 
-            print(f'{key} is not here!')
+        # try&catch 문을 사용하여 key값이 arr에 있지 않는 경우, 출력하게 만든다.
+        try:
+          # key값이 중간값보다 크다면, 배열을 i+1 번째 부터 배열의 끝까지 잘라서 배열을 다시 만든뒤, while문을 다시 순회한다. (왜냐하면 오름차순 정렬이기 때문 -> i+1 번째 이상인 원소들에서 key값을 찾을 수 있기 때문)
+          if (arr[i] < key): arr = arr[i+1:]
+          # 반대 case -> key값이 중간값보다 크다면, 0번째 부터 i-1번째까지 원소들에서 중간값을 다시 찾아 비교한다 (while문)
+          elif (arr[i] > key): arr = arr[:i-1]
+          # 만약 key값이 일치한다면, 출력 후 반복문을 정지한다.
+          elif (arr[i] == key): 
+              print(f'{key} is here!')
+              break
+        except:
+          print(f'{key} is not here!')
 
 # 3-1. 해시 탐색 알고리즘 (저장)
 def hash_search_save(arr, search_key):
