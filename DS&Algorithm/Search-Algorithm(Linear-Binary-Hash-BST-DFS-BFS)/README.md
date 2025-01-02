@@ -26,16 +26,20 @@
               elif (arr[i] == key): 
                   print(f'{key} is here!')
                   break
-            catch:
+            except:
               print(f'{key} is not here!')
 ---
 ### 3-1. 해시 탐색 알고리즘 (저장)
     def hash_search_save(arr, search_key):
+        # key를 저장하는 배열의 크기를 일부러 2배가량 더 크게 만든다 (conflict 방지)
         arr_key_save = [0 for i in range(len(arr)*2)]
+        # 데이터가 들어가있는 배열을 접근한다
         for i in range(len(arr)):
+            # key값은 key배열의 크기에 modulo 연산을 통해 구하고
             key = arr[i] % len(arr)*2
-    
+            # 그 값을 위에서 선언한 arr_key_save 배열에 값이 들어가있는지 확인하고 없으면 그 key 값을 저장한다.
             if(arr_key_save[key] == None): arr_key_save[key] = arr[i]
+            # 값이 이미 있으면 while문을 통해 key 값을 계속 1로 더하여 arr_key_save배열에서 빈공간을 찾는다
             else:
                 while(arr_key_save[key]):
                     if(key < len(arr_key_save) - 1): key += 1
@@ -46,8 +50,10 @@
     
 ### 3-2. 해시 탐색 알고리즘 (탐색)
     def hash_search(arr, target):
+        # 탐색은 위에서 저장한 것 처럼 arr_key_save배열의 크기만큼 modulo 연산을 통해 key값을 찾고
         key = target % len(arr)
-    
+
+        # 반복문을 통해 찾을 때 까지 key값을 +1 해주며 탐색한다.
         while(arr[key] != target):
             key = (key + 1) % len(arr)
         
