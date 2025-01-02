@@ -197,7 +197,7 @@
     # Node Management
     class NodeMgmt:
         def __init__(self, head) -> None:
-            # head는 여기서 root를 의미함함
+            # head는 여기서 root를 의미함
             self.head = head
     
         def insert(self, value) -> None:
@@ -296,7 +296,7 @@
                         self.change_node_parent = self.change_node
                         self.change_node = self.change_node.left
                     
-                    # 3-1-2 오른쪽 자식 노드가 존재한다면, change_node_parent의 왼쪽에 해당 노드를 연결한다다
+                    # 3-1-2 오른쪽 자식 노드가 존재한다면, change_node_parent의 왼쪽에 해당 노드를 연결한다
                     if(self.change_node.right != None):
                         self.change_node_parent.left = self.change_node.right
                     # 3-1-1
@@ -311,7 +311,7 @@
                 
                 # 3-2 (삭제할 노드가 parent node의 오른쪽에 있는 경우!)
                 # 3-2-1 위와 동일! 삭제할 오른쪽 자식중, 가장 작은 값을 가지는 노드의 child 노드가 존재하지 않는 경우 
-                # 3-2-2 위와 동일! 삭제할 오른쪽 자식중, 가장 작은 값을 가지는 노드의 child 노드중 오른쪽 child node가 존재하는 경우우
+                # 3-2-2 위와 동일! 삭제할 오른쪽 자식중, 가장 작은 값을 가지는 노드의 child 노드중 오른쪽 child node가 존재하는 경우
                 else:
                     # 이때, current node는 삭제되는 노드를 가르킨다.
                     self.change_node = self.current_node
@@ -356,7 +356,7 @@
     
     
     def dic_bfs(g, start):
-        # 시작 값으로 큐 초기화 (1이 들어가 있음음)
+        # 시작 값으로 큐 초기화 (1이 들어가 있음)
         queue = deque([start])
         # 노드를 방문 처리 한다.
         visited = set([start])
@@ -436,14 +436,20 @@
     visited = [False] * 8
         
     def i_dfs(v):
+        # 처음 들어오는 (root) 값에 방문 표시와 더불어 stack에 담아준다
         visited[v] = True
         stack = []
         stack.append(v)
-    
+
+        # stack안에 있는 값들이 다 동날 때까지
         while stack:
+            # v값을 내보내고 출력한다
             v = stack.pop()
             print(v)
+            # graph[v]안에 있는 값들 다 가져옴
             for i in graph[v]:
+                # 만약 해당 노드가 방문하지 않았다면
                 if visited[i] == False:
+                    # 방문표시 및 값을 stack안에 넣어준다
                     visited[i] = True
                     stack.append(i)
