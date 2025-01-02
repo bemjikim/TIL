@@ -82,8 +82,9 @@
             print(f"Circular queue array is {cirqueue}")
         
         else: break
-
-if __name__ == '__main__':
-    # f_stack()
-    # f_queue()
-    # f_cirqueue()
+---
+### main function
+    if __name__ == '__main__':
+        f_stack()
+        f_queue()
+        f_cirqueue()
