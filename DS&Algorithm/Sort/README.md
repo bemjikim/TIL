@@ -65,16 +65,16 @@
         # arr길이의 몫 (나누기 결과)
         mid = len(arr) // 2
     
-    # left/right 각각 따로 나눔 -> 재귀함수 때문에 결국에는 한 가지만 남음 left -> left / right 또 나뉘어짐짐
+    # left/right 각각 따로 나눔 -> 재귀함수 때문에 결국에는 한 가지만 남음 left -> left / right 또 나뉘어짐
     left = merge_sort(arr[:mid])
-    # left 다 거친 후, right도 똑같이 작업 -> right -> left/right로 또 쪼갬갬
+    # left 다 거친 후, right도 똑같이 작업 -> right -> left/right로 또 쪼갬
     right = merge_sort(arr[mid:])
 
-    # merge할 arr 초기화화
+    # merge할 arr 초기화
     merged_arr = []
     low = high = 0
 
-    # 분열된 왼쪽, 오른쪽을 비교해서 가장 작은 것만 배열에 차곡차곡 쌓음 (서로의 배열 값을 다 꺼낼 때까지지)
+    # 분열된 왼쪽, 오른쪽을 비교해서 가장 작은 것만 배열에 차곡차곡 쌓음 (서로의 배열 값을 다 꺼낼 때까지)
     while low < len(left) and high < len(right):
         if left[low] < right[high]:
             merged_arr.append(left[low])
@@ -93,7 +93,7 @@
 ### 5-1. Quick Sort (이 때, pivot의 값은 항상 입력받은 배열의 left값에 의거해 정해진다.)
     def partition(arr, p, r):
         pivot = arr[p]
-        # low는 항상 pivot보다 +1의 위치에 and low는 r값 (right)의 위치에에
+        # low는 항상 pivot보다 +1의 위치에 and low는 r값 (right)의 위치에
         low = p + 1
         high = r
 
@@ -117,7 +117,7 @@
         if (left < right):
             # initialization pivot's value
             pivot = partition(arr, left, right)
-            # pivot을 기준으로 왼/오른쪽 정렬 (부분 정렬렬)
+            # pivot을 기준으로 왼/오른쪽 정렬 (부분 정렬)
             quick_sort(arr, left, pivot-1)
             quick_sort(arr, pivot+1, right)
 
@@ -125,13 +125,13 @@
 ---
 ### 5-2. Try another version!! Quick Sort -> 한개의 함수로 합친 것 (순수 재귀함수)
     def quick_sort2(arr, left, right):
-        # quick sort 재귀 함수를 부를 때, left가 right보다 크면 안되므로 if문 선언언
+        # quick sort 재귀 함수를 부를 때, left가 right보다 크면 안되므로 if문 선언
         if left >= right:
             return
     
     # pivot은 arr[left] (맨 처음 시작할 때는 arr[0]임)
     pivot = left
-    # low (왼쪽에서 오른쪽으로 오는 변수) -> pivot을 제외해야 하므로 pivot+1로 선언언
+    # low (왼쪽에서 오른쪽으로 오는 변수) -> pivot을 제외해야 하므로 pivot+1로 선언
     low = left + 1
     # high (오른쪽에서 왼쪽으로 오는 변수)
     high = right
@@ -146,11 +146,11 @@
         # low, high가 정지한 상황일 때 (arr[low]가 pivot보다 큰 값을 마주침 and arr[high]가 pivot보다 작은 값을 마주침)
         # low가 high보다 크다면 (지나친 상황이면), high가 가르키는 값과 pivot 값을 그냥 바꿔준다 (이후 반복문이 깨짐짐)
         if (low > high): arr[high], arr[pivot] = arr[pivot], arr[high]
-        # low가 high를 지나치지 않았으면, low and high가 가르키는 값들을 서로 바꿔주고 다시 반복을 시킨다다
+        # low가 high를 지나치지 않았으면, low and high가 가르키는 값들을 서로 바꿔주고 다시 반복을 시킨다
         else: arr[low], arr[high] = arr[high], arr[low]
 
     # 마지막으로 left / right 로 분할해서 구해준다
-    # left ~ high - 1 // high + 1 ~ right (이때 high가 가르키는 값은 pivot이 되므로 pivot 기준으로 왼쪽 / 오른쪽을 담당함함)
+    # left ~ high - 1 // high + 1 ~ right (이때 high가 가르키는 값은 pivot이 되므로 pivot 기준으로 왼쪽 / 오른쪽을 담당함)
     quick_sort2(arr, left, high - 1)
     quick_sort2(arr, high + 1, right)
 ---
@@ -161,7 +161,7 @@
 
     # current는 last_parent ~ 0 까지 1씩 감소하게 되고, 이는 마지막 parent로 부터 parent가 쭉 올라감을 의미한다.
     for current in range(last_parent, -1, -1):
-        # 마지막에 current가 가르키는 값과 child값을 비교해서 바꿔주고 child가 혹시나 밑에도 바꿔줘야 하는 수가 있을 수도 있으므로 이런 반복문 사용 (위쪽을 고려한 것것)
+        # 마지막에 current가 가르키는 값과 child값을 비교해서 바꿔주고 child가 혹시나 밑에도 바꿔줘야 하는 수가 있을 수도 있으므로 이런 반복문 사용 (위쪽을 고려한 것)
         while current <= last_parent:
             # 이때 child는 왼쪽 자식 노드를 의미하고 sibiling은 오른쪽 자식 노드를 의미한다
             child = current * 2 + 1
