@@ -33,11 +33,11 @@ Explore stack and queue data structures, their operations, and real-world use ca
 ### Description:
 Dive into search algorithms, including Linear Search, Binary Search, Hashing, Binary Search Trees (BST), Breadth-First Search (BFS), and Depth-First Search (DFS). This section covers both theoretical and practical aspects with code samples.
 
-> **Link**: [Search Algorithm Folder](https://github.com/bemjikim/TIL/tree/main/DS%26Algorithm/DP)
+> **Link**: [Search Algorithm Folder](https://github.com/bemjikim/TIL/tree/main/DS%26Algorithm/Search-Algorithm(Linear-Binary-Hash-BST-DFS-BFS))
 
 ---
 
 ## 📋 5. Dynamic Programming (동적 계획법)
 ### Description: Dynamic Programming (DP) is a powerful optimization technique used to solve complex problems by breaking them down into smaller, overlapping subproblems. This section covers theory contetns and example codes.
 
-> **Link**: [Dynamic Programming Folder](https://github.com/bemjikim/TIL/tree/main/DS%26Algorithm/Search-Algorithm(Linear-Binary-Hash-BST-DFS-BFS))
+> **Link**: [Dynamic Programming Folder](https://github.com/bemjikim/TIL/tree/main/DS%26Algorithm/DP)
