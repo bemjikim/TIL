@@ -38,6 +38,15 @@ Dive into search algorithms, including Linear Search, Binary Search, Hashing, Bi
 ---
 
 ## 📋 5. Dynamic Programming (동적 계획법)
-### Description: Dynamic Programming (DP) is a powerful optimization technique used to solve complex problems by breaking them down into smaller, overlapping subproblems. This section covers theory contetns and example codes.
+### Description: 
+Dynamic Programming (DP) is a powerful optimization technique used to solve complex problems by breaking them down into smaller, overlapping subproblems. This section covers theory contetns and example codes.
 
 > **Link**: [Dynamic Programming Folder](https://github.com/bemjikim/TIL/tree/main/DS%26Algorithm/DP)
+
+---
+
+## 📈 5. Graph (그래프)
+### Description: Graphs are versatile data structures used to represent relationships between objects. This section explores key concepts such as vertices, edges, adjacency lists, and matrices. Additionally, it delves into essential graph algorithms, including Dijkstra's algorithm, Bellman Ford algorithm, and Floyd Warshall algorithm.
+
+
+> **Link**: [Graph Folder]((https://github.com/bemjikim/TIL/tree/main/DS%26Algorithm/Graph))
