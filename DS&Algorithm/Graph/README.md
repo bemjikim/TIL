@@ -1,6 +1,6 @@
 # Preview of graph.py
 
-### 1.다익스트라 알고리즘 (Dijkstra Algorithm)
+### 1. 다익스트라 알고리즘 (Dijkstra Algorithm)
     """ This is input value. you can just copy and paste it. 
     5 6 1
     1 2 3
