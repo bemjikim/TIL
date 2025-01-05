@@ -56,6 +56,8 @@
     
     weights = dijkstra(1)
     print(weights)
+    
+---
 
 ### 2. Bellman Ford Algorithm
     """ This is input value. you can just copy and paste it. 
@@ -108,7 +110,8 @@
     # 아니라면... 이것은 음순환을 가진 그래프임을 명시!
     else:
         print('Graph has negative cycle!')
-
+        
+---
 
 ### 3. Floyd Warshall Algorithm
     """ This is input value. you can just copy and paste it.
