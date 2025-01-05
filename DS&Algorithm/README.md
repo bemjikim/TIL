@@ -45,7 +45,7 @@ Dynamic Programming (DP) is a powerful optimization technique used to solve comp
 
 ---
 
-## 📈 5. Graph (그래프)
+## 📈 6. Graph (그래프)
 ### Description: Graphs are versatile data structures used to represent relationships between objects. This section explores key concepts such as vertices, edges, adjacency lists, and matrices. Additionally, it delves into essential graph algorithms, including Dijkstra's algorithm, Bellman Ford algorithm, and Floyd Warshall algorithm.
 
 
