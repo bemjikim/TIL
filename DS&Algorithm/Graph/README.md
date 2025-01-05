@@ -1,6 +1,6 @@
 # Graph를 활용한 Dijkstra, Bellman Ford, Floyd Warshall Algorithms들 구현!
 
-    ### 1. Dijkstra Algorithm
+### 1. Dijkstra Algorithm
     """ This is input value. you can just copy and paste it. 
     5 6 1
     1 2 3
