@@ -1,6 +1,6 @@
-# Graph를 활용한 Dijkstra, Bellman Ford, Floyd Warshall Algorithms들 구현!
+# Preview of graph.py
 
-### 1. Dijkstra Algorithm
+### 1.다익스트라 알고리즘 (Dijkstra Algorithm)
     """ This is input value. you can just copy and paste it. 
     5 6 1
     1 2 3
@@ -59,7 +59,7 @@
     
 ---
 
-### 2. Bellman Ford Algorithm
+### 2. 벨만포드 알고리즘 (Bellman Ford Algorithm)
     """ This is input value. you can just copy and paste it. 
     5 9
     1 2 -6
@@ -113,7 +113,7 @@
         
 ---
 
-### 3. Floyd Warshall Algorithm
+### 3. 플로이드 워셜 알고리즘 (Floyd Warshall Algorithm)
     """ This is input value. you can just copy and paste it.
     4 7
     1 2 5
