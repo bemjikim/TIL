@@ -150,3 +150,133 @@
         for j in range (1, v + 1):
             print(graph[i][j], end = " ")
         print()
+
+---
+
+### 4. 크루스칼 알고리즘 (Kruskal ALgorithm)
+
+    # union & find algorithm
+    def find(v):
+        if v != root[v]:
+            root[v] = find(root[v])
+        return root[v]
+    
+    def union(v1, v2):
+        # v1과 v2의 부모노드를 불러온다
+        v1 = find(v1)
+        v2 = find(v2)
+    
+        # 비교해서 더 큰 부모노드의 값을 가지면 해당 값을 작은 부모노드의 값으로 업데이트 해준다
+        if v1 < v2:
+            root[v2] = v1
+        else:
+            root[v1] = v2
+    
+    def is_connected(v1, v2):
+        # v1과 v2의 부모노드를 불러온다
+        v1 = find(v1)
+        v2 = find(v2)
+    
+        # 부모노드의 값이 가지면 연결되었다는 의미이므로 True를 return 해준다
+        if v1 == v2:
+            return True
+        else:
+            return False
+    
+    # kruskal function
+    def kruskal():
+        # 간선 정보를 리스트화로 초기화 한다
+        edge_info = list()
+    
+        # 간선 정보들을 저장해준다.
+        for i in range(1, node_cnt + 1):
+            # i + 1 을 해주는 이유는 undirected graph이므로!
+            for j in range (i + 1, node_cnt + 1):
+                # 0 인 경우 가중치를 설정하지 않은 것이므로 통과해야함
+                if graph[i][j] != 0:
+                    edge_info.append([i, j, graph[i][j]])
+    
+        # 가중치를 오름차순으로 정렬한다.
+        edge_info.sort(key = lambda x: x[2])
+    
+        sum_w = 0
+        edge_cnt = 0
+    
+        for v1, v2, weight in edge_info:
+            if edge_cnt == node_cnt - 1:
+                break
+            if not is_connected(v1, v2):
+                union(v1, v2)
+                sum_w += weight
+                edge_cnt += 1
+                
+        print(f"Total weight of MST = {sum_w}")
+    
+    if __name__=="__main__":
+        # Hard Coding -> 5로 고정
+        node_cnt = 5
+        # node_cnt + 1 을 하는 이유는 0번 인덱스는 사용하지 않기 때문! (그래프라서 2중문으로 초기화함)
+        graph = [[0] * (node_cnt + 1) for _ in range(node_cnt + 1)]
+        # root table 설정
+        root = list(range(node_cnt + 1))
+    
+        # Initializing the graph (undirected grap)
+        # 예시로 들면, 1번노드 2번노드의 가중치는 1로 같다 -> graph[1][2] == graph[2][1]
+        graph[1][2], graph[1][3], graph[1][4] = 1, 8, 3
+        graph[2][1], graph[2][4], graph[2][5] = 1, 2, 7
+        graph[3][1], graph[3][4], graph[3][5] = 8, 4, 5
+        graph[4][1], graph[4][2], graph[4][3], graph[4][5] = 3, 2, 4, 6
+        graph[5][2], graph[5][3], graph[5][4] = 7, 5, 6
+                    
+        kruskal()
+
+---
+
+### 5. 프림 알고리즘 (Prim Algorithm)
+    import heapq
+    
+    def prim(start):
+        # heap 초기화
+        heap = list()
+        # connected 배열 초기화 (연결되어 있는지 확인하는 테이블)
+        connected = [False] * (node_cnt + 1)
+        # MST 가중치의 합
+        sum_w = 0
+    
+        # 시작 노드 삽입
+        heapq.heappush(heap, [0, start])
+        
+        # 힙에 있는 것이 다 바닥날 때 까지
+        while heap:
+            # connected가 모두 True가 되어버리면 모든 노드가 연결되어있다는 뜻이므로 정지한다.
+            if not False in connected:
+                break
+            
+            # 가중치와 노드번호를 heap에서 꺼낸다 (최소힙 유지)
+            weight, v = heapq.heappop(heap)
+    
+            # 만약 connected 배열에서 꺼낸 노드가 False (선택되지 않았다면) 이면
+            if not connected[v]:
+                # 해당 노드를 True로 바꿔주고 MST 가중치를 더해준다
+                connected[v] = True
+                sum_w += weight
+    
+                # 그리고 해당 노드와 연결된 graph에 접근한다
+                for i in range(1, node_cnt + 1):
+                    # 여기서 [v][i]는 v노드에 연결된 모든 노드에 접근하는데, 연결이 되지 않는 노드의 가중치는 0으로 가정했으므로, 해당 가중치를 가지면 넘어가도록 한다.
+                    # 그리고 이미 connected 배열안에 있는 노드를 heap에 추가하면 안되므로 미리 if 문에 선언한다.
+                    if graph[v][i] != 0 and connected[i] == False:
+                        heapq.heappush(heap, [graph[v][i], i])
+        
+        print(f"Total weight of MST = {sum_w}")
+        
+    if __name__ == "__main__":
+        node_cnt = 5
+        graph = [[0] * (node_cnt + 1) for _ in range(node_cnt + 1)]
+        graph[1][2], graph[1][3], graph[1][4] = 1, 8, 3
+        graph[2][1], graph[2][4], graph[2][5] = 1, 2, 7
+        graph[3][1], graph[3][4], graph[3][5] = 8, 4, 5
+        graph[4][1], graph[4][2], graph[4][3], graph[4][5] = 3, 2, 4, 6
+        graph[5][2], graph[5][3], graph[5][4] = 7, 5, 6
+    
+        prim(1)
