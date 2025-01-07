@@ -50,3 +50,12 @@ Dynamic Programming (DP) is a powerful optimization technique used to solve comp
 
 
 > **Link**: [Graph Folder](https://github.com/bemjikim/TIL/tree/main/DS%26Algorithm/Graph)
+
+---
+
+## 🤑 7. Greedy (그리디)
+### Description: Greedy algorithms are used to solve optimization problems by making the most optimal choice at each step, aiming for a globally optimal solution. This section includes explanations of the greedy approach, examples of common problems like the Activity Selection Problem, and more, along with code implementations.
+
+
+> **Link**: [Greedy Folder](https://github.com/bemjikim/TIL/tree/main/DS%26Algorithm/Greedy)
+
