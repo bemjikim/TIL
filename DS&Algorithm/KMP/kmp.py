@@ -43,7 +43,7 @@ def kmp_search(str_arr, sub_arr):
     # 전체 str 길이와 부분 배열 길이를 각각 선언한다.
     m = len(str_arr)
     n = len(sub_arr)
-    # lps는 부분 문자열에서 가져와야 하므로 n만큼의 길이로 설정한다다
+    # lps는 부분 문자열에서 가져와야 하므로 n만큼의 길이로 설정한다
     lps = [0] * n
 
     # 계산해서 lps 배열 값을 넣어준다
