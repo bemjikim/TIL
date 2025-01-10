@@ -46,7 +46,8 @@ Dynamic Programming (DP) is a powerful optimization technique used to solve comp
 ---
 
 ## 📈 6. Graph (그래프)
-### Description: Graphs are versatile data structures used to represent relationships between objects. This section explores key concepts such as vertices, edges, adjacency lists, and matrices. Additionally, it delves into essential graph algorithms, including Dijkstra's algorithm, Bellman Ford algorithm, Floyd Warshall algorithm, Kruskal algorithm, and Prim algorithm.
+### Description:
+Graphs are versatile data structures used to represent relationships between objects. This section explores key concepts such as vertices, edges, adjacency lists, and matrices. Additionally, it delves into essential graph algorithms, including Dijkstra's algorithm, Bellman Ford algorithm, Floyd Warshall algorithm, Kruskal algorithm, and Prim algorithm.
 
 
 > **Link**: [Graph Folder](https://github.com/bemjikim/TIL/tree/main/DS%26Algorithm/Graph)
@@ -54,7 +55,8 @@ Dynamic Programming (DP) is a powerful optimization technique used to solve comp
 ---
 
 ## 🤑 7. Greedy (그리디)
-### Description: Greedy algorithms are used to solve optimization problems by making the most optimal choice at each step, aiming for a globally optimal solution. This section includes explanations of the greedy approach, examples of common problems like the Activity Selection Problem, and more, along with code implementations.
+### Description: 
+Greedy algorithms are used to solve optimization problems by making the most optimal choice at each step, aiming for a globally optimal solution. This section includes explanations of the greedy approach, examples of common problems like the Activity Selection Problem, and more, along with code implementations.
 
 
 > **Link**: [Greedy Folder](https://github.com/bemjikim/TIL/tree/main/DS%26Algorithm/Greedy)
@@ -62,13 +64,15 @@ Dynamic Programming (DP) is a powerful optimization technique used to solve comp
 ---
 
 ## 📏 8. KMP (부분 문자열 찾기)
-### Description: The Knuth-Morris-Pratt (KMP) algorithm is an efficient string matching algorithm that reduces redundant comparisons in pattern searching. This section provides an in-depth explanation of the algorithm, including prefix function computation and implementation details, with examples to demonstrate its application (lps.)
+### Description: 
+The Knuth-Morris-Pratt (KMP) algorithm is an efficient string matching algorithm that reduces redundant comparisons in pattern searching. This section provides an in-depth explanation of the algorithm, including prefix function computation and implementation details, with examples to demonstrate its application (lps.)
 
 > **Link**: [KMP Folder](https://github.com/bemjikim/TIL/tree/main/DS%26Algorithm/KMP)
 
 ---
 
 ## 👆👆 9. Two Pointer (투 포인터 알고리즘)
-### Description: The Two Pointer technique is a powerful and efficient method often used in problems involving arrays or linked lists. By using two pointers to traverse data structures, it simplifies solving problems related to subarrays, pairs, and more. This section includes theoretical explanations, example problems like finding pairs with a specific sum, and sliding window techniques with code implementations.
+### Description: 
+The Two Pointer technique is a powerful and efficient method often used in problems involving arrays or linked lists. By using two pointers to traverse data structures, it simplifies solving problems related to subarrays, pairs, and more. This section includes theoretical explanations, example problems like finding pairs with a specific sum, and sliding window techniques with code implementations.
 
 > **Link**: [TwoPointer Folder](https://github.com/bemjikim/TIL/tree/main/DS%26Algorithm/Two-Pointer)
