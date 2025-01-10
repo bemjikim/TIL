@@ -75,4 +75,4 @@ The Knuth-Morris-Pratt (KMP) algorithm is an efficient string matching algorithm
 ### Description: 
 The Two Pointer technique is a powerful and efficient method often used in problems involving arrays or linked lists. By using two pointers to traverse data structures, it simplifies solving problems related to subarrays, pairs, and more. This section includes theoretical explanations, example problems like finding pairs with a specific sum, and sliding window techniques with code implementations.
 
-> **Link**: [TwoPointer Folder](https://github.com/bemjikim/TIL/tree/main/DS%26Algorithm/Two-Pointer)
+> **Link**: [Two-Pointer Folder](https://github.com/bemjikim/TIL/tree/main/DS%26Algorithm/Two-Pointer)
